@@ -146,7 +146,7 @@ export default function Home() {
             </div>
 
             {/* Right: Visual */}
-            <div className="relative flex justify-center lg:justify-end">
+            <div className="hidden lg:flex relative justify-center lg:justify-end">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
