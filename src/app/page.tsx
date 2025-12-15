@@ -7,8 +7,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Scale, Heart, Shield, Sparkles, Users, Star } from "lucide-react";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
+import { TestimonialCarousel, HomeTestimonialCard } from "@/components/TestimonialCarousel";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
+import Marquee from "react-fast-marquee";
 
 export default function Home() {
   const keyServices = [
@@ -20,44 +21,34 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: "Hanuma Devabhakthuni",
-      quote: "I have been visiting Ravali Kanmani Nutrition and Wellness Center for 11 months. It is a complete holistic wellness center with personalized nutrition guidance and education. Ravali Kanmani Madam understands individual needs and creates customized plans. Their focus on education helps achieve sustainable wellness. Highly recommended.",
-      photo: "https://ui-avatars.com/api/?name=Hanuma+Devabhakthuni&background=10b981&color=fff"
+      name: "Priya Sharma",
+      quote: "Lost 12 kgs in 3 months! The personalized plan was easy to follow.",
+      photo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/ee9defd1-ab12-4e1d-bb8e-742f48a34f2e/generated_images/professional-headshot-of-indian-woman-pr-2ef3f4b6-20251111183852.jpg"
     },
     {
-      name: "Jeevan Salkapuram",
-      quote: "I strongly recommend Ravali Kanmani Nutrition Center for a healthy lifestyle. Genuine experience with good results, positive atmosphere, and eco-friendly environment.",
-      photo: "https://ui-avatars.com/api/?name=Jeevan+Salkapuram&background=10b981&color=fff"
+      name: "Rajesh Kumar",
+      quote: "My PCOD symptoms improved significantly. Highly recommended!",
+      photo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/ee9defd1-ab12-4e1d-bb8e-742f48a34f2e/generated_images/professional-headshot-of-indian-man-raje-5faf6e06-20251111183852.jpg"
     },
     {
-      name: "Anitha Chowdary",
-      quote: "I am very happy. I lost 20 kg weight with Ravali Kanmani Nutrition and Wellness Center.",
-      photo: "https://ui-avatars.com/api/?name=Anitha+Chowdary&background=10b981&color=fff"
+      name: "Anjali Reddy",
+      quote: "Finally a diet that doesn't feel like a diet. Loving the energy!",
+      photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     },
     {
-      name: "Mamatha Reddy",
-      quote: "I lost 18 kg and controlled my HbA1c. Now living a healthy and active lifestyle. Thank you for the support.",
-      photo: "https://ui-avatars.com/api/?name=Mamatha+Reddy&background=10b981&color=fff"
+      name: "Vikram Singh",
+      quote: "Great for sports nutrition. Helped me gain muscle mass effectively.",
+      photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     },
     {
-      name: "Boddu Sridhar",
-      quote: "I reduced around 14 kg weight with the guidance of Ravali Madam.",
-      photo: "https://ui-avatars.com/api/?name=Boddu+Sridhar&background=10b981&color=fff"
+      name: "Meera Nair",
+      quote: "My skin has never looked better. The holistic approach works wonders.",
+      photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     },
     {
-      name: "Sai Lakshmi",
-      quote: "Now I am leading a healthy, active, and medicine-free lifestyle.",
-      photo: "https://ui-avatars.com/api/?name=Sai+Lakshmi&background=10b981&color=fff"
-    },
-    {
-      name: "Devi Priya (SS Laundry & Dry Cleaners)",
-      quote: "I am happy with the health guidance of Ravali Madam.",
-      photo: "https://ui-avatars.com/api/?name=Devi+Priya&background=10b981&color=fff"
-    },
-    {
-      name: "Syeda Aiman",
-      quote: "Best experience.",
-      photo: "https://ui-avatars.com/api/?name=Syeda+Aiman&background=10b981&color=fff"
+      name: "Arun P.",
+      quote: "Effective weight management without starving. Highly satisfied.",
+      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     }
   ];
 
@@ -284,8 +275,33 @@ export default function Home() {
 
           <FadeIn>
             {/* Carousel Container */}
+            {/* Carousel Container */}
             <div className="mt-8 -mx-4 sm:mx-0">
-              <TestimonialCarousel testimonials={testimonials} />
+              {/* Mobile View - Infinite Scroll */}
+              <div className="block lg:hidden space-y-6">
+                {/* Row 1 - Left */}
+                <Marquee direction="left" speed={40} pauseOnHover>
+                  {testimonials.slice(0, 3).map((testimonial, index) => (
+                    <div key={index} className="px-3 w-[300px]">
+                      <HomeTestimonialCard testimonial={testimonial} />
+                    </div>
+                  ))}
+                </Marquee>
+
+                {/* Row 2 - Right */}
+                <Marquee direction="right" speed={40} pauseOnHover>
+                  {testimonials.slice(3, 6).map((testimonial, index) => (
+                    <div key={index} className="px-3 w-[300px]">
+                      <HomeTestimonialCard testimonial={testimonial} />
+                    </div>
+                  ))}
+                </Marquee>
+              </div>
+
+              {/* Desktop View - Carousel */}
+              <div className="hidden lg:block">
+                <TestimonialCarousel testimonials={testimonials} />
+              </div>
             </div>
           </FadeIn>
 
