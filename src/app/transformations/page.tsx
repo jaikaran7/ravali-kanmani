@@ -278,7 +278,32 @@ export default function TransformationsPage() {
           </FadeIn>
 
           <div className="mx-auto mt-12 max-w-7xl space-y-12">
-            {/* Desktop View (Carousel) */}
+            {/* Mobile View: Infinite Scroll Marquee */}
+            <div className="block md:hidden space-y-8">
+              {/* Row 1: Left Scroll */}
+              <div className="w-full">
+                <Marquee speed={40} direction="left" gradient={false}>
+                  {testimonialsRow1.map((testimonial) => (
+                    <div key={testimonial.name} className="mx-4 w-[300px]">
+                      <TestimonialCard testimonial={testimonial} />
+                    </div>
+                  ))}
+                </Marquee>
+              </div>
+
+              {/* Row 2: Right Scroll */}
+              <div className="w-full">
+                <Marquee speed={40} direction="right" gradient={false}>
+                  {testimonialsRow2.map((testimonial) => (
+                    <div key={testimonial.name} className="mx-4 w-[300px]">
+                      <TestimonialCard testimonial={testimonial} />
+                    </div>
+                  ))}
+                </Marquee>
+              </div>
+            </div>
+
+            {/* Desktop View: Carousel */}
             <div className="hidden md:block space-y-12">
               {/* Row 1 */}
               <div className="w-full" role="group" aria-label="Client testimonials row 1" data-analytics="testimonials-row-1">
@@ -318,31 +343,6 @@ export default function TransformationsPage() {
                     ))}
                   </CarouselContent>
                 </Carousel>
-              </div>
-            </div>
-
-            {/* Mobile View (Infinite Marquee) */}
-            <div className="block md:hidden space-y-8">
-              {/* Row 1 - Scroll Right */}
-              <div className="w-full">
-                <Marquee direction="right" speed={40} gradient={false} className="py-4">
-                  {testimonialsRow1.map((testimonial) => (
-                    <div key={testimonial.name} className="mx-4 w-[300px]">
-                      <TestimonialCard testimonial={testimonial} />
-                    </div>
-                  ))}
-                </Marquee>
-              </div>
-
-              {/* Row 2 - Scroll Left */}
-              <div className="w-full">
-                <Marquee direction="left" speed={40} gradient={false} className="py-4">
-                  {testimonialsRow2.map((testimonial) => (
-                    <div key={testimonial.name} className="mx-4 w-[300px]">
-                      <TestimonialCard testimonial={testimonial} />
-                    </div>
-                  ))}
-                </Marquee>
               </div>
             </div>
           </div>
