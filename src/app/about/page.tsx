@@ -7,21 +7,21 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Ravali Kanmani | Certified Nutrition & Wellness Consultant",
-  description: "Meet Ravali Kanmani - Certified Nutrition & Wellness Consultant with 8+ years experience. Personalized nutrition plans for weight management, PCOD, immunity, and family wellness.",
+  title: "About Ravali Kanmani | Nutrition & Wellness Coach",
+  description: "Meet Ravali Kanmani - Nutrition & Wellness Coach with 8+ years experience. Personalized nutrition plans for weight management, PCOD, immunity, and family wellness.",
 };
 
 export default function AboutPage() {
   const credentials = [
     {
-      icon: GraduationCap,
-      title: "MSc in Nutrition",
-      description: "Advanced degree in nutritional science"
+      icon: GraduationCap, // Kept icon as requested, or could switch to BookOpen if available/imported
+      title: "Practical Nutrition Expertise",
+      description: "Hands-on experience in personalized nutrition planning and lifestyle-based wellness programs."
     },
     {
-      icon: Award,
-      title: "Certified Nutritionist",
-      description: "Internationally recognized certification"
+      icon: Award, // Kept icon as requested
+      title: "Client-Centered Guidance",
+      description: "Personalized support focused on sustainable habits, education, and long-term health outcomes."
     },
     {
       icon: Heart,
@@ -31,7 +31,7 @@ export default function AboutPage() {
     {
       icon: Target,
       title: "Results-Driven",
-      description: "500+ successful transformations"
+      description: "1000+ successful transformations"
     }
   ];
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
                   <img
                     src="/ravali-hero.jpg"
                     alt="Ravali Kanmani"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-8 rounded-2xl shadow-xl">
@@ -77,13 +77,13 @@ export default function AboutPage() {
             <FadeIn direction="right" delay={0.3}>
               <div className="space-y-6">
                 <h2 className="text-3xl font-bold text-foreground">
-                  Certified Nutrition & Wellness Consultant
+                  Nutrition & Wellness Coach
                 </h2>
 
                 <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                   <p>
                     With over 8 years of dedicated experience in nutrition and wellness consulting,
-                    I've had the privilege of transforming the lives of more than 500 individuals
+                    I've had the privilege of transforming the lives of more than 1000 individuals
                     and families in Hyderabad and beyond.
                   </p>
 
@@ -103,7 +103,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-3 gap-6 pt-6">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-primary mb-1">
-                      <CountUp end={500} suffix="+" />
+                      <CountUp end={1000} suffix="+" />
                     </div>
                     <p className="text-sm text-muted-foreground">Clients Helped</p>
                   </div>
@@ -131,10 +131,10 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <FadeIn>
             <h2 className="text-4xl font-bold text-center text-foreground mb-4">
-              Credentials & Certifications
+              Experience & Expertise
             </h2>
             <p className="text-center text-muted-foreground mb-12">
-              Backed by education, experience, and proven results
+              Backed by real-world practice, personalized nutrition guidance, and proven client results.
             </p>
           </FadeIn>
 

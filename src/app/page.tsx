@@ -21,34 +21,34 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: "Priya Sharma",
-      quote: "Lost 12 kgs in 3 months! The personalized plan was easy to follow.",
-      photo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/ee9defd1-ab12-4e1d-bb8e-742f48a34f2e/generated_images/professional-headshot-of-indian-woman-pr-2ef3f4b6-20251111183852.jpg"
+      name: "Hanuma Devabhakthuni",
+      quote: "A complete holistic wellness center. Focused on education and sustainable lifestyle changes.",
+      photo: ""
     },
     {
-      name: "Rajesh Kumar",
-      quote: "My PCOD symptoms improved significantly. Highly recommended!",
-      photo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/ee9defd1-ab12-4e1d-bb8e-742f48a34f2e/generated_images/professional-headshot-of-indian-man-raje-5faf6e06-20251111183852.jpg"
+      name: "Jeevan Salkapuram",
+      quote: "Genuine experience with good results. Positive, eco-friendly atmosphere.",
+      photo: ""
     },
     {
-      name: "Anjali Reddy",
-      quote: "Finally a diet that doesn't feel like a diet. Loving the energy!",
-      photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      name: "Anitha Chowdary",
+      quote: "I lost 20 kgs! Very happy with the results and guidance.",
+      photo: ""
     },
     {
-      name: "Vikram Singh",
-      quote: "Great for sports nutrition. Helped me gain muscle mass effectively.",
-      photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      name: "Mamatha Reddy",
+      quote: "Lost 18 kgs and achieved a healthier, more active lifestyle.",
+      photo: "/testimonials/mamatha-reddy.png"
     },
     {
-      name: "Meera Nair",
-      quote: "My skin has never looked better. The holistic approach works wonders.",
-      photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      name: "Boddu Sridhar",
+      quote: "Reduced around 14 kgs with the guidance of Ravali madam.",
+      photo: "/testimonials/boddu-sridhar.png"
     },
     {
-      name: "Arun P.",
-      quote: "Effective weight management without starving. Highly satisfied.",
-      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      name: "Sai Lakshmi",
+      quote: "Now leading a healthy, active, and medicine-free lifestyle.",
+      photo: "/testimonials/sai-lakshmi.png"
     }
   ];
 
@@ -165,7 +165,7 @@ export default function Home() {
                     <img
                       src="/ravali-hero.jpg"
                       alt="Ravali Kanmani"
-                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover object-top transform hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                 </motion.div>
@@ -334,27 +334,27 @@ export default function Home() {
           <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-x-auto snap-x snap-mandatory pb-8 -mx-4 px-4 md:px-0 md:pb-0 scrollbar-hide md:overflow-visible">
             {[
               {
-                name: "Meera J.",
-                result: "Lost 15 kg in 4 months",
-                story: "The personalised plans meant I never felt deprived.",
-                beforeImage: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80",
-                afterImage: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80"
+                name: "Sameera",
+                result: "Lost 25 kilos",
+                story: "Sameera lost 25 kilos and completely transformed her health and energy levels.",
+                beforeImage: "/transformations/before/sameera-before.png",
+                afterImage: "/transformations/after/sameera-after.png",
               },
               {
-                name: "Arun S.",
-                result: "Gained 8 kg healthy weight",
-                story: "Nutrition changed everything for me.",
-                beforeImage: "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=600&q=80",
-                afterImage: "https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=600&q=80"
+                name: "Nagasudha",
+                result: "Lost 18 kilos",
+                story: "Nagasudha prioritized her well-being and lost 18 kilos, dealing with hormonal balances effectively.",
+                beforeImage: "/transformations/before/Nagasudha-before.png",
+                afterImage: "/transformations/after/Nagasudha-after.png",
               },
               {
-                name: "Divya K.",
-                result: "PCOD symptoms reduced by 70%",
-                story: "Balanced nutrition brought my cycles back on track.",
-                beforeImage: "https://images.unsplash.com/photo-1506089676908-3592f7389d4d?auto=format&fit=crop&w=600&q=80",
-                afterImage: "https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&w=600&q=80"
+                name: "Masthu",
+                result: "Lost 22 kilos",
+                story: "Achieved a remarkable 22-kilo weight loss through Ravali’s customized wellness plan.",
+                beforeImage: "/transformations/before/masthu-before.png",
+                afterImage: "/transformations/after/masthu-after.png",
               }
-            ].map((card, index) => (
+            ].map((card: any, index) => (
               <div
                 key={index}
                 className="flex-shrink-0 w-[85vw] sm:w-[50vw] md:w-auto md:flex-shrink snap-center"
@@ -366,6 +366,8 @@ export default function Home() {
                     beforeAlt={`${card.name} - Before`}
                     afterAlt={`${card.name} - After`}
                     className="max-w-none rounded-2xl overflow-hidden aspect-[4/3] md:aspect-[4/3]"
+                    beforeImageClassName={card.beforeImageClassName}
+                    afterImageClassName={card.afterImageClassName}
                   />
                   <div className="mt-6 space-y-2 text-center">
                     <h3 className="text-xl font-bold text-slate-900">{card.name}</h3>

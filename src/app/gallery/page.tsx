@@ -11,88 +11,53 @@ export default function GalleryPage() {
 
   const galleryImages = [
     {
-      src: "/gallery/event-1.jpg",
-      alt: "Community Wellness Event",
-      height: "medium"
-    },
-    {
-      src: "/gallery/event-2.jpg",
-      alt: "Wellness Seminar",
-      height: "medium"
-    },
-    {
-      src: "/gallery/group-1.png",
-      alt: "Group Session",
+      src: "/gallery/gallery-1.png",
+      alt: "Wellness Coaching Session",
       height: "tall"
     },
     {
-      src: "/gallery/group-2.png",
-      alt: "Awards Ceremony",
+      src: "/gallery/gallery-2.jpg",
+      alt: "Community Gathering",
       height: "medium"
     },
     {
-      src: "/gallery/group-3.png",
-      alt: "Team Gathering",
+      src: "/gallery/gallery-3.jpg",
+      alt: "Health Transformation Success",
       height: "medium"
     },
     {
-      src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/ee9defd1-ab12-4e1d-bb8e-742f48a34f2e/generated_images/wellness-transformation-gallery-photo-sh-567b61e7-20251111183852.jpg",
-      alt: "Healthy meal prep",
+      src: "/gallery/gallery-4.png",
+      alt: "Group Wellness Activity",
       height: "tall"
     },
     {
-      src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/ee9defd1-ab12-4e1d-bb8e-742f48a34f2e/generated_images/wellness-transformation-gallery-photo-of-cad233a0-20251111183855.jpg",
-      alt: "Yoga and wellness",
+      src: "/gallery/gallery-5.jpg",
+      alt: "Celebrating Milestones",
       height: "medium"
     },
     {
-      src: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=800&fit=crop",
-      alt: "Fresh produce",
+      src: "/gallery/gallery-6.png",
+      alt: "Community Event",
       height: "medium"
     },
     {
-      src: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=800&fit=crop",
-      alt: "Healthy food",
+      src: "/gallery/gallery-7.png",
+      alt: "Wellness Session",
       height: "tall"
     },
     {
-      src: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&h=800&fit=crop",
-      alt: "Salad bowl",
+      src: "/gallery/gallery-8.png",
+      alt: "Awards Celebration",
       height: "medium"
     },
     {
-      src: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=800&fit=crop",
-      alt: "Fresh vegetables",
-      height: "tall"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=800&h=800&fit=crop",
-      alt: "Smoothie bowl",
+      src: "/gallery/gallery-9.jpg",
+      alt: "Group Counseling",
       height: "medium"
     },
     {
-      src: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=800&h=800&fit=crop",
-      alt: "Healthy breakfast",
-      height: "medium"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=800&h=800&fit=crop",
-      alt: "Nutritious meal",
-      height: "tall"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=800&fit=crop",
-      alt: "Cooking healthy",
-      height: "medium"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=800&h=800&fit=crop",
-      alt: "Wellness lifestyle",
-      height: "medium"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&h=800&fit=crop",
-      alt: "Fruit bowl",
+      src: "/gallery/gallery-10.jpg",
+      alt: "Team Success",
       height: "tall"
     }
   ];
@@ -100,11 +65,11 @@ export default function GalleryPage() {
   const getHeightClass = (height: string) => {
     switch (height) {
       case "tall":
-        return "min-h-[420px]";
+        return "min-h-[200px] sm:min-h-[420px]";
       case "medium":
-        return "min-h-[340px]";
+        return "min-h-[160px] sm:min-h-[340px]";
       default:
-        return "min-h-[260px]";
+        return "min-h-[140px] sm:min-h-[260px]";
     }
   };
 
@@ -127,7 +92,7 @@ export default function GalleryPage() {
       {/* Masonry Gallery */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <ResponsiveMasonry columnsCountBreakPoints={{ 0: 1, 640: 2, 1024: 3, 1400: 4 }}>
+          <ResponsiveMasonry columnsCountBreakPoints={{ 0: 2, 640: 2, 1024: 3, 1400: 4 }}>
             <Masonry gutter="24px">
               {galleryImages.map((image, index) => (
                 <motion.div

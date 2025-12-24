@@ -137,7 +137,7 @@ export default function ContactPage() {
                       ) : (
                         <>
                           <Send className="mr-2 h-5 w-5" />
-                          Send via WhatsApp
+                          Send Enquiry
                         </>
                       )}
                     </Button>

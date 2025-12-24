@@ -15,125 +15,117 @@ import Marquee from "react-fast-marquee";
 
 const transformationCards = [
   {
-    name: "Meera J.",
-    result: "Lost 15 kg in 4 months",
+    name: "Sameera",
+    result: "Lost 25 kilos",
     story:
-      "The personalised plans meant I never felt deprived. I gained confidence in every aspect of my life.",
-    beforeImage:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-    afterImage:
-      "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80",
+      "Sameera’s journey is a testament to dedication. She lost 25 kilos and completely transformed her health and energy levels.",
+    beforeImage: "/transformations/before/sameera-before.png",
+    afterImage: "/transformations/after/sameera-after.png",
   },
   {
-    name: "Arun S.",
-    result: "Gained 8 kg healthy weight",
+    name: "Sai",
+    result: "Lost 41 kilos",
     story:
-      "From constant fatigue to feeling energised every morning - nutrition changed everything for me.",
-    beforeImage:
-      "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80",
-    afterImage:
-      "https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=900&q=80",
+      "Sai accomplished an extraordinary transformation by losing 41 kilos with a structured, science-backed nutrition plan.",
+    beforeImage: "/transformations/before/sai-before.png",
+    afterImage: "/transformations/after/sai-after.png",
   },
   {
-    name: "Divya K.",
-    result: "PCOD symptoms reduced by 70%",
+    name: "Masthu",
+    result: "Lost 22 kilos",
     story:
-      "Balanced nutrition and mindful lifestyle tweaks brought my cycles back on track within months.",
-    beforeImage:
-      "https://images.unsplash.com/photo-1506089676908-3592f7389d4d?auto=format&fit=crop&w=900&q=80",
-    afterImage:
-      "https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&w=900&q=80",
+      "Masthu, a professional beautician, achieved a remarkable 22-kilo weight loss through Ravali’s customized wellness plan.",
+    beforeImage: "/transformations/before/masthu-before.png",
+    afterImage: "/transformations/after/masthu-after.png",
   },
   {
-    name: "Rakesh P.",
-    result: "Reduced body fat by 12%",
+    name: "Anitha",
+    result: "Lost 20 kilos",
     story:
-      "Strength training + customised meals helped me get lean without losing energy.",
-    beforeImage:
-      "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=80",
-    afterImage:
-      "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80",
+      "Anitha’s transformation was about reclaiming her confidence. Losing 20 kilos gave her a new lease on life.",
+    beforeImage: "/transformations/before/Anitha-before.png",
+    afterImage: "/transformations/after/Anitha-after.png",
   },
   {
-    name: "Anita M.",
-    result: "Improved digestion & energy",
+    name: "Nagasudha",
+    result: "Lost 18 kilos",
     story:
-      "Small habit changes and focused nutrition transformed my daily energy levels.",
-    beforeImage:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=900&q=80",
-    afterImage:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80",
+      "Nagasudha prioritized her well-being and lost 18 kilos, dealing with hormonal balances effectively.",
+    beforeImage: "/transformations/before/Nagasudha-before.png",
+    afterImage: "/transformations/after/Nagasudha-after.png",
   },
   {
-    name: "Vikram T.",
-    result: "Maintained muscle while losing fat",
+    name: "Varalaxmi",
+    result: "Lost 15 kilos",
     story:
-      "Macro tracking and recovery planning made progress steady and sustainable.",
-    beforeImage:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80",
-    afterImage:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
+      "Varalaxmi’s weight loss of 15 kilos proved that age is just a number when it comes to fitness and vitality.",
+    beforeImage: "/transformations/before/Varalaxmi-before.png",
+    afterImage: "/transformations/after/Varalaxmi-after.png",
   },
 ];
 
 const testimonials = [
   {
-    name: "Priya S.",
+    name: "Hanuma Devabhakthuni",
     quote:
-      "Lost 15kg in 3 months! The personalised approach made all the difference. Ravali's guidance was life-changing.",
+      "A complete holistic wellness center with personalized nutrition guidance. Ravali Kanmani mam focuses on education and sustainable lifestyle changes.",
     rating: 5,
-    designation: "Weight Loss Journey",
-    photo:
-      "https://images.unsplash.com/photo-1528892952291-009c663ce843?auto=format&fit=crop&w=256&q=80",
+    designation: "Holistic Wellness",
+    photo: "",
   },
   {
-    name: "Anjali R.",
+    name: "Jeevan Salkapuram",
     quote:
-      "My PCOD symptoms improved significantly with Ravali's guidance. I feel more energetic and confident.",
+      "Genuine experience with good results. Positive, eco-friendly atmosphere and excellent guidance for a healthy lifestyle.",
     rating: 5,
-    designation: "PCOD Management",
-    photo:
-      "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=256&q=80",
+    designation: "Healthy Lifestyle",
+    photo: "",
   },
   {
-    name: "Meera K.",
+    name: "Anitha Chowdary",
     quote:
-      "The meal plans were so easy to follow. I never felt deprived and still achieved my weight loss goals.",
+      "I lost 20 kgs with Ravali Kanmani Nutrition and Wellness Center. Very happy with the results and guidance.",
     rating: 5,
-    designation: "Sustainable Weight Loss",
-    photo:
-      "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=256&q=80",
+    designation: "Weight Loss",
+    photo: "",
   },
   {
-    name: "Rakesh P.",
+    name: "Mamatha Reddy",
     quote:
-      "Strength training + customised meals helped me get lean without losing energy.",
+      "Lost 18 kgs and achieved a healthier, more active lifestyle with improved HbA1c control.",
     rating: 5,
-    designation: "Reduced body fat by 12%",
-    photo:
-      "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=256&q=80",
+    designation: "Weight Loss & HbA1c Control",
+    photo: "/testimonials/mamatha-reddy.png",
   },
   {
-    name: "Anita M.",
+    name: "Boddu Sridhar",
     quote:
-      "Small habit changes and focused nutrition transformed my daily energy levels.",
+      "Reduced around 14 kgs with the guidance of Ravali madam. Very satisfied with the results.",
     rating: 5,
-    designation: "Improved digestion & energy",
-    photo:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=256&q=80",
+    designation: "Weight Management",
+    photo: "/testimonials/boddu-sridhar.png",
   },
   {
-    name: "Vikram T.",
+    name: "Sai Lakshmi",
     quote:
-      "Macro tracking and recovery planning made progress steady and sustainable.",
+      "Now leading a healthy, active, and medicine-free lifestyle. Thankful for the guidance and support.",
     rating: 5,
-    designation: "Maintained muscle while losing fat",
-    photo:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=256&q=80",
+    designation: "Healthy Lifestyle",
+    photo: "/testimonials/sai-lakshmi.png",
   },
 ];
 
-function TransformationCard({ card }: { card: typeof transformationCards[0] }) {
+function TransformationCard({ card }: {
+  card: {
+    name: string;
+    result: string;
+    story: string;
+    beforeImage: string;
+    afterImage: string;
+    beforeImageClassName?: string;
+    afterImageClassName?: string;
+  }
+}) {
   return (
     <div className="group relative h-full w-full max-w-[340px] rounded-[32px] border border-emerald-900/10 bg-white/90 p-6 shadow-[0_40px_80px_-50px_rgba(16,185,129,0.6)] transition-all duration-300 hover:-translate-y-3 hover:border-emerald-500/40 hover:shadow-[0_55px_95px_-60px_rgba(16,185,129,0.65)] mx-auto">
       <BeforeAfterSlider
@@ -142,6 +134,8 @@ function TransformationCard({ card }: { card: typeof transformationCards[0] }) {
         beforeAlt={`${card.name} - Before`}
         afterAlt={`${card.name} - After`}
         className="max-w-none"
+        beforeImageClassName={card.beforeImageClassName}
+        afterImageClassName={card.afterImageClassName}
       />
       <div className="mt-6 space-y-3 text-center">
         <h3 className="text-xl font-bold text-slate-900">{card.name}</h3>
@@ -160,12 +154,18 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
       className="group flex h-full w-full max-w-[360px] flex-col gap-6 rounded-[28px] border border-emerald-900/10 bg-white/90 p-8 text-left shadow-[0_30px_70px_-45px_rgba(16,185,129,0.55)] transition-all duration-300 hover:-translate-y-3 hover:border-emerald-500/40 hover:shadow-[0_40px_90px_-55px_rgba(16,185,129,0.65)] mx-auto"
     >
       <div className="flex items-center gap-4">
-        <img
-          src={testimonial.photo}
-          alt={`${testimonial.name} avatar`}
-          className="h-16 w-16 rounded-full object-cover shadow-lg ring-4 ring-emerald-500/20"
-          loading="lazy"
-        />
+        {testimonial.photo ? (
+          <img
+            src={testimonial.photo}
+            alt={`${testimonial.name} avatar`}
+            className="h-16 w-16 rounded-full object-cover shadow-lg ring-4 ring-emerald-500/20"
+            loading="lazy"
+          />
+        ) : (
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-2xl font-bold text-emerald-700 shadow-lg ring-4 ring-emerald-500/20">
+            {testimonial.name.charAt(0)}
+          </div>
+        )}
         <div>
           <div className="flex items-center gap-1 text-amber-400">
             {Array.from({ length: testimonial.rating }).map(
@@ -212,7 +212,7 @@ export default function TransformationsPage() {
                 Real Stories
               </span>
               <h1 className="mt-6 text-4xl font-bold text-slate-900 sm:text-5xl md:text-6xl">
-                Real Transformations
+                Real Stories, Real Transformations
               </h1>
               <p className="mt-4 text-lg text-slate-600 sm:text-xl">
                 Drag the slider to see the amazing transformations of our clients.

@@ -21,12 +21,18 @@ export function HomeTestimonialCard({ testimonial }: { testimonial: Testimonial 
         <div className="group relative isolate h-full rounded-[32px] border border-emerald-900/10 bg-white/90 px-6 py-8 shadow-[0_35px_70px_-45px_rgba(16,185,129,0.55)] transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-[0_45px_90px_-50px_rgba(16,185,129,0.65)] sm:px-8 sm:py-10">
             <div className="absolute inset-x-8 top-6 -z-10 h-28 rounded-full bg-emerald-100/40 blur-3xl transition-opacity duration-300 group-hover:opacity-70" />
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
-                <img
-                    src={testimonial.photo}
-                    alt={testimonial.name}
-                    className="h-14 w-14 rounded-full object-cover shadow-lg ring-4 ring-emerald-500/20 sm:h-16 sm:w-16"
-                    loading="lazy"
-                />
+                {testimonial.photo ? (
+                    <img
+                        src={testimonial.photo}
+                        alt={testimonial.name}
+                        className="h-14 w-14 rounded-full object-cover shadow-lg ring-4 ring-emerald-500/20 sm:h-16 sm:w-16"
+                        loading="lazy"
+                    />
+                ) : (
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-xl font-bold text-emerald-700 shadow-lg ring-4 ring-emerald-500/20 sm:h-16 sm:w-16">
+                        {testimonial.name.charAt(0)}
+                    </div>
+                )}
                 <div>
                     <h4 className="text-base font-semibold text-slate-900 sm:text-lg">
                         {testimonial.name}

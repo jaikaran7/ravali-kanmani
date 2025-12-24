@@ -7,6 +7,8 @@ interface BeforeAfterSliderProps {
     beforeImage: string;
     afterImage: string;
     className?: string;
+    beforeImageClassName?: string;
+    afterImageClassName?: string;
 }
 
 export const BeforeAfterSlider = ({
@@ -14,7 +16,9 @@ export const BeforeAfterSlider = ({
     afterImage,
     beforeAlt = "Before transformation",
     afterAlt = "After transformation",
-    className = ""
+    className = "",
+    beforeImageClassName = "",
+    afterImageClassName = ""
 }: BeforeAfterSliderProps & { beforeAlt?: string; afterAlt?: string }) => {
     const [sliderPosition, setSliderPosition] = useState(50);
     const [isDragging, setIsDragging] = useState(false);
@@ -63,7 +67,7 @@ export const BeforeAfterSlider = ({
 
     return (
         <div
-            className={`relative w-full aspect-[4/3] overflow-hidden select-none cursor-ew-resize rounded-2xl ${className}`}
+            className={`relative w-full aspect-[4/3] overflow-hidden select-none cursor-ew-resize rounded-2xl bg-gray-100 ${className}`}
             ref={containerRef}
             onMouseDown={handleMouseDown}
             onTouchStart={handleMouseDown}
@@ -82,7 +86,7 @@ export const BeforeAfterSlider = ({
             <img
                 src={afterImage}
                 alt={afterAlt}
-                className="absolute inset-0 h-full w-full object-cover"
+                className={`absolute inset-0 h-full w-full object-cover object-top ${afterImageClassName}`}
                 draggable={false}
             />
 
@@ -99,7 +103,7 @@ export const BeforeAfterSlider = ({
                 <img
                     src={beforeImage}
                     alt={beforeAlt}
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className={`absolute inset-0 h-full w-full object-cover object-top ${beforeImageClassName}`}
                     draggable={false}
                 />
 
